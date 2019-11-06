@@ -22,4 +22,5 @@ public class Edge {
         this.Y2 = Y2;
         this.color = color;
     }
+
 }

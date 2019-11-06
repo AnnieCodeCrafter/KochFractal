@@ -36,6 +36,7 @@ public class FUN3KochFractalFX extends Application {
     // Koch manager
     // TO DO: Create class KochManager in package calculate
     private KochManager kochManager;
+
     
     // Current level of Koch fractal
     private int currentLevel = 1;
@@ -237,6 +238,7 @@ public class FUN3KochFractalFX extends Application {
     private void increaseLevelButtonActionPerformed(ActionEvent event) {
         if (currentLevel < 12) {
             // resetZoom();
+            kochManager.stopThreads();
             currentLevel++;
             labelLevel.setText("Level: " + currentLevel);
             kochManager.changeLevel(currentLevel);
@@ -246,6 +248,7 @@ public class FUN3KochFractalFX extends Application {
     private void decreaseLevelButtonActionPerformed(ActionEvent event) {
         if (currentLevel > 1) {
             // resetZoom();
+//            kochManager.stopThreads();
             currentLevel--;
             labelLevel.setText("Level: " + currentLevel);
             kochManager.changeLevel(currentLevel);
@@ -254,6 +257,7 @@ public class FUN3KochFractalFX extends Application {
 
     private void fitFractalButtonActionPerformed(ActionEvent event) {
         resetZoom();
+//        kochManager.stopThreads();
         kochManager.drawEdges();
     }
     
