@@ -59,6 +59,18 @@ public class KochManager {
         Thread trLeft = new Thread(leftEdge);
         Thread trBottom = new Thread(bottomEdge);
 
+        if(trRight.isAlive()) {
+            trRight.interrupt();
+        }
+
+        if(trLeft.isAlive()) {
+            trLeft.interrupt();
+        }
+
+        if(trBottom.isAlive()) {
+            trBottom.interrupt();
+        }
+
 
         tsCalc.init();
         tsCalc.setBegin("Begin calculating");
@@ -71,35 +83,37 @@ public class KochManager {
         trLeft.start();
         trBottom.start();
 
-        if(!trRight.isAlive() && !trLeft.isAlive() && trBottom.isAlive()) {
+        while(trRight.isAlive()) {
+            System.out.println("Right busy");
+        }
 
+        while(trLeft.isAlive()) {
+            System.out.println("Left busy");
+        }
 
-//            try {
-//                trRight.join();
-//                trLeft.join();
-//                trBottom.join();
+        while(trBottom.isAlive()) {
+            System.out.println("Bottom busy");
+        }
 
-                trBottom.interrupt();
-                trLeft.interrupt();
-                trBottom.interrupt();
+            try {
+                trRight.join();
+                trLeft.join();
+                trBottom.join();
+
+//                trBottom.interrupt();
+//                trLeft.interrupt();
+//                trBottom.interrupt();
                 tsCalc.setEnd("End calculating");
                 //     application.setTextNrEdges("" + koch.getNrOfEdges());
                 application.setTextCalc(tsCalc.toString());
                 drawEdges();
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
-
-
-
-        }
-
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
 
 
 
     }
-
-
 
     
     public void drawEdges() {
@@ -122,6 +136,10 @@ public class KochManager {
         application.setTextDraw(tsDraw.toString());
     }
 
+
+    public void stopThreads() {
+
+    }
 
 
     

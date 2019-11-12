@@ -3,20 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="23d08e17-2e51-4876-ae5e-0e3d6e1c38f8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Run/BottomEdge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Run/BottomEdge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Run/LeftEdge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Run/LeftEdge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Run/NotKochFractal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Run/RightEdge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Run/RightEdge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/calculate/KochFractal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/calculate/KochFractal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/calculate/KochManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/calculate/KochManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fun3kochfractalfx/FUN3KochFractalFX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fun3kochfractalfx/FUN3KochFractalFX.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FUN3_KochFractal-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/FUN3_KochFractal-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/calculate/KochFractal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/calculate/KochFractal.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/calculate/KochManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/calculate/KochManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -115,7 +103,7 @@
       <workItem from="1573330583918" duration="1192000" />
       <workItem from="1573384601082" duration="7785000" />
       <workItem from="1573482970932" duration="1999000" />
-      <workItem from="1573550731604" duration="3141000" />
+      <workItem from="1573550731604" duration="4173000" />
     </task>
     <task id="LOCAL-00001" summary="my errors are giving errors">
       <created>1573068773044</created>
@@ -124,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573068773044</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="works, but use fit fractal">
+      <created>1573565031927</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1573565031927</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +140,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="my errors are giving errors" />
-    <option name="LAST_COMMIT_MESSAGE" value="my errors are giving errors" />
+    <MESSAGE value="works, but use fit fractal" />
+    <option name="LAST_COMMIT_MESSAGE" value="works, but use fit fractal" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Run/LeftEdge.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
