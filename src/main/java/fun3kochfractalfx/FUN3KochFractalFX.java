@@ -238,7 +238,7 @@ public class FUN3KochFractalFX extends Application {
     private void increaseLevelButtonActionPerformed(ActionEvent event) {
         if (currentLevel < 12) {
             // resetZoom();
-            kochManager.stopThreads();
+          //  kochManager.stopThreads();
             currentLevel++;
             labelLevel.setText("Level: " + currentLevel);
             kochManager.changeLevel(currentLevel);

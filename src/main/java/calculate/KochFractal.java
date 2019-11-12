@@ -4,8 +4,9 @@
  */
 package calculate;
 
-import Run.NotKochFractal;
 import javafx.scene.paint.Color;
+
+import java.util.List;
 
 /**
  *
@@ -20,24 +21,18 @@ public class KochFractal {
     private boolean cancelled;  // Flag to indicate that calculation has been cancelled
    // private KochManager manager;
 
-//    public KochFractal(KochManager manager) {
-//        this.manager = manager;
-//    }
-
-    private NotKochFractal notKoch;
-
-    public KochFractal(NotKochFractal NotKoch) {
-        this.notKoch = NotKoch;
+    public KochFractal(float hue, int level, boolean cancelled) {
+       this.hue = hue;
+       this.level = level;
+       this.cancelled = cancelled;
     }
 
-
-
-    private void drawKochEdge(double ax, double ay, double bx, double by, int n) {
+    public void drawKochEdge(double ax, double ay, double bx, double by, int n, List<Edge> f) {
         if (!cancelled) {
             if (n == 1) {
                 hue = hue + 1.0f / nrOfEdges;
                 Edge e = new Edge(ax, ay, bx, by, Color.hsb(hue*360.0, 1.0, 1.0));
-                notKoch.notKochList.add(e);
+                f.add(e);
             } else {
                 double angle = Math.PI / 3.0 + Math.atan2(by - ay, bx - ax);
                 double distabdiv3 = Math.sqrt((bx - ax) * (bx - ax) + (by - ay) * (by - ay)) / 3;
@@ -45,39 +40,19 @@ public class KochFractal {
                 double cy = Math.sin(angle) * distabdiv3 + (by - ay) / 3 + ay;
                 final double midabx = (bx - ax) / 3 + ax;
                 final double midaby = (by - ay) / 3 + ay;
-                drawKochEdge(ax, ay, midabx, midaby, n - 1);
-                drawKochEdge(midabx, midaby, cx, cy, n - 1);
-                drawKochEdge(cx, cy, (midabx + bx) / 2, (midaby + by) / 2, n - 1);
-                drawKochEdge((midabx + bx) / 2, (midaby + by) / 2, bx, by, n - 1);
+                drawKochEdge(ax, ay, midabx, midaby, n - 1, f);
+                drawKochEdge(midabx, midaby, cx, cy, n - 1, f);
+                drawKochEdge(cx, cy, (midabx + bx) / 2, (midaby + by) / 2, n - 1, f);
+                drawKochEdge((midabx + bx) / 2, (midaby + by) / 2, bx, by, n - 1, f);
             }
         }
     }
 
-    public void generateLeftEdge() {
-        hue = 0f;
-        cancelled = false;
-        drawKochEdge(0.5, 0.0, (1 - Math.sqrt(3.0) / 2.0) / 2, 0.75, level);
-        Edge e = new Edge(0.5, 0.0, (1 - Math.sqrt(3.0) / 2.0) / 2, 0.75, Color.hsb(hue*360.0, 1.0, 1.0));
 
-        notKoch.leftList.add(e);
 
-    }
 
-    public void generateBottomEdge() {
-        hue = 1f / 3f;
-        cancelled = false;
-        drawKochEdge((1 - Math.sqrt(3.0) / 2.0) / 2, 0.75, (1 + Math.sqrt(3.0) / 2.0) / 2, 0.75, level);
-        Edge e = new Edge((1 - Math.sqrt(3.0) / 2.0) / 2, 0.75, (1 + Math.sqrt(3.0) / 2.0) / 2, 0.75, Color.hsb(hue*360.0, 1.0, 1.0));
-        notKoch.bottomList.add(e);
-    }
 
-    public void generateRightEdge() {
-        hue = 2f / 3f;
-        cancelled = false;
-        drawKochEdge((1 + Math.sqrt(3.0) / 2.0) / 2, 0.75, 0.5, 0.0, level);
-        Edge e = new Edge((1 + Math.sqrt(3.0) / 2.0) / 2, 0.75, 0.5, 0.0, Color.hsb(hue*360.0, 1.0, 1.0));
-        notKoch.rightList.add(e);
-    }
+
     
     public void cancel() {
         cancelled = true;
