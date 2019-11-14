@@ -2,9 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23d08e17-2e51-4876-ae5e-0e3d6e1c38f8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/calculate/Generator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Run/BottomEdge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Run/BottomEdge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Run/LeftEdge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Run/LeftEdge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Run/RightEdge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Run/RightEdge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/calculate/KochFractal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/calculate/KochFractal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/calculate/KochManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/calculate/KochManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FUN3_KochFractal-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/FUN3_KochFractal-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/calculate/KochFractal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/calculate/KochFractal.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/calculate/KochManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/calculate/KochManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +27,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -103,7 +115,10 @@
       <workItem from="1573330583918" duration="1192000" />
       <workItem from="1573384601082" duration="7785000" />
       <workItem from="1573482970932" duration="1999000" />
-      <workItem from="1573550731604" duration="4173000" />
+      <workItem from="1573550731604" duration="4269000" />
+      <workItem from="1573566378529" duration="2168000" />
+      <workItem from="1573631416364" duration="6409000" />
+      <workItem from="1573726973035" duration="2298000" />
     </task>
     <task id="LOCAL-00001" summary="my errors are giving errors">
       <created>1573068773044</created>
@@ -119,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573565031927</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Last changes">
+      <created>1573566249353</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1573566249353</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,15 +163,41 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="my errors are giving errors" />
     <MESSAGE value="works, but use fit fractal" />
-    <option name="LAST_COMMIT_MESSAGE" value="works, but use fit fractal" />
+    <MESSAGE value="Last changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Last changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Run/RightEdge.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Run/LeftEdge.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Run/BottomEdge.java</url>
           <line>25</line>
-          <option name="timeStamp" value="2" />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/calculate/KochManager.java</url>
+          <line>98</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/calculate/KochManager.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/calculate/KochManager.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

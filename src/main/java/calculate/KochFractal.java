@@ -4,35 +4,42 @@
  */
 package calculate;
 
+import fun3kochfractalfx.FUN3KochFractalFX;
 import javafx.scene.paint.Color;
 
 import java.util.List;
+import java.util.Objects;
+import java.util.Observable;
 
 /**
  *
  * @author Peter Boots
  * Modified for FUN3 by Gertjan Schouten
  */
-public class KochFractal {
+public class KochFractal extends Observable  {
 
     private int level = 1;      // The current level of the fractal
     private int nrOfEdges = 3;  // The number of edges in the current level of the fractal
     private float hue;          // Hue value of color for next edge
     private boolean cancelled;  // Flag to indicate that calculation has been cancelled
-   // private KochManager manager;
+  //  private KochManager kochManager;
+
 
     public KochFractal(float hue, int level, boolean cancelled) {
        this.hue = hue;
        this.level = level;
        this.cancelled = cancelled;
+       //kochManager = new KochManager(new FUN3KochFractalFX());
     }
 
-    public void drawKochEdge(double ax, double ay, double bx, double by, int n, List<Edge> f) {
+    public synchronized void drawKochEdge(double ax, double ay, double bx, double by, int n, List<Edge> f) {
         if (!cancelled) {
             if (n == 1) {
                 hue = hue + 1.0f / nrOfEdges;
                 Edge e = new Edge(ax, ay, bx, by, Color.hsb(hue*360.0, 1.0, 1.0));
                 f.add(e);
+
+
             } else {
                 double angle = Math.PI / 3.0 + Math.atan2(by - ay, bx - ax);
                 double distabdiv3 = Math.sqrt((bx - ax) * (bx - ax) + (by - ay) * (by - ay)) / 3;
@@ -70,4 +77,6 @@ public class KochFractal {
     public int getNrOfEdges() {
         return nrOfEdges;
     }
+
+
 }

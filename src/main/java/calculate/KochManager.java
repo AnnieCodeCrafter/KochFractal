@@ -4,10 +4,8 @@
  */
 package calculate;
 
-import java.util.ArrayList;
-
-import java.util.Collections;
-import java.util.List;
+import java.lang.reflect.Array;
+import java.util.*;
 
 
 import Run.BottomEdge;
@@ -23,7 +21,7 @@ import timeutil.TimeStamp;
  */
 public class KochManager {
 
-   private List<Edge> edges;
+   private ArrayList<Edge> edges;
     private FUN3KochFractalFX application;
     private TimeStamp tsCalc;
     private TimeStamp tsDraw;
@@ -37,8 +35,10 @@ public class KochManager {
 
 
 
+
+
     public KochManager(FUN3KochFractalFX application) {
-        this.edges = Collections.synchronizedList(new ArrayList());
+        this.edges = new ArrayList<>();
         this.application = application;
         this.tsCalc = new TimeStamp();
         this.tsDraw = new TimeStamp();
@@ -75,10 +75,6 @@ public class KochManager {
         tsCalc.init();
         tsCalc.setBegin("Begin calculating");
 
-//        bottomEdge.run();
-//        leftEdge.run();
-//        rightEdge.run();
-
         trRight.start();
         trLeft.start();
         trBottom.start();
@@ -99,6 +95,10 @@ public class KochManager {
                 trRight.join();
                 trLeft.join();
                 trBottom.join();
+
+                rightEdge.update(edges);
+                leftEdge.update(edges);
+                bottomEdge.update(edges);
 
 //                trBottom.interrupt();
 //                trLeft.interrupt();
@@ -122,11 +122,13 @@ public class KochManager {
         application.clearKochPanel();
 
 
-        edges.addAll(rightEdge.rightEdges);
+//        edges.addAll(rightEdge.rightEdges);
+//
+//        edges.addAll(leftEdge.leftEdges);
+//
+//        edges.addAll(bottomEdge.bottomEdges);
 
-        edges.addAll(leftEdge.leftEdges);
 
-        edges.addAll(bottomEdge.bottomEdges);
 
         for (Edge e : edges) {
               application.drawEdge(e);
@@ -140,8 +142,5 @@ public class KochManager {
     public void stopThreads() {
 
     }
-
-
-    
 
 }
